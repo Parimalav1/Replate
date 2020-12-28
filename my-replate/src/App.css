@@ -1,0 +1,445 @@
+* {
+  /* border: 1px solid black;   */
+  color: #100a08;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+/* REGISTRATION/SIGNUP STYLING */
+.formDiv {
+  background-color:#cbc2bf;
+}
+.form {
+  border: 1px solid black;
+  background-color: #ffffff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 30%;
+  margin-top: 20px;
+};
+#login {
+  margin: 5% 0;
+}
+.btn {
+  border:1px solid #54362b;
+  background-color: #cbc2bf;
+  width: 60%;
+  padding: 10px 20px;
+  margin: 3% auto;
+}
+.btn:hover {
+  background: #54362b;
+  color: white;
+}
+/* LOGIN STYLING */
+.form-container {
+  height: 100%;
+  width: 100%;
+  top: 100px;
+  left: 0;
+  right: 0;
+  position: fixed;
+  background: url(./assets/replate11.jpg);
+  background-repeat: no-repeat;
+  background-size  : cover;
+  filter: blur(3px);
+}
+.form-div {  
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  padding: 20px;
+  border: 1px solid black;
+  background-color: #ffffff; /* Fallback color */
+  background-color: rgba(255,255,255, 1); /* Black w/opacity/see-through */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 30%;
+  margin-top: 100px;
+};
+.form-div h2 {
+  display: flex;
+}
+
+.inputC button {
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.inputC {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  /* padding: 0px; */
+}
+.inputC input{
+  border:0.5px solid black;
+  width: 56%;
+  /* margin: 3% auto; */
+  margin-top: 3%;
+  margin-bottom: 3%;
+  margin-left: 20%;
+  padding: 10px 2%;
+}
+
+.inputC .fa-eye {
+  margin-left: 3px;
+}
+
+/* HEADER STYLING */
+#nav {
+  color : grey;
+  margin : 20px auto;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+};
+#h1 {
+  width: 40%;
+}
+#h1 h1{
+  width: 90px;
+  font-size: 2rem;
+  margin: 0px;
+  padding: 0 40px;
+}
+.header-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.line {
+  border-right: 1px solid black;
+  border-left : 1px solid black;
+}
+.navele a {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 120px;
+  color          : grey;
+  text-decoration: none;
+  padding        : 4px 2px;
+  font-size      : 1.2rem;
+  font-weight: bold;
+  }
+  
+/* HOME STYLING */
+.title-container {
+    background       : url(./assets/replate11.jpg);
+    background-repeat: no-repeat;
+    background-size  : cover;
+    background-color : white;
+    width            : 100%;
+    height           : 70vh;
+    padding          : 10px 0 20px;
+    display: flex;
+    justify-content: flex-end;
+  }
+#pDiv {
+    height: 10vh;
+}
+.title-container p {
+      padding         : 10px 10px;
+      color           : black;
+      background-color: white;
+      font-size       : 1.2rem;
+      margin-right    : 20px;
+}
+#container {
+    padding: 30px 20px;
+}
+#container h2 {
+        font-size: 3rem;
+}
+#hr {
+    width        : 100%;
+    padding      : 20px 0;
+    border       : none;
+    border-bottom: 1px dashed black;
+}
+.container1 {
+    margin         : 0 20px;
+    display        : flex;
+    justify-content: space-around;
+}
+.testimonial {
+      background-color: #F5F5F5;
+      width: 50%;
+      display:flex;
+      flex-direction: column;
+      align-content:center;
+      margin: 20px 1px;
+}
+.uses h3 {
+      font-size : 1.4rem;
+      padding   : 20px;
+      /* width     : 100%; */
+      text-align: center;
+}
+.uses h4 {
+      font-size : 1.2rem;
+      padding   : 20px;
+      /* width     : 100%; */
+      text-align: center;
+}
+.uses p {
+      text-align: justify;
+      width     : 100%;
+      font-size : 1rem;
+      padding   : 20px;
+}
+.testimonial img {
+        width : 100%;
+        margin: 0 auto;
+}
+.testimonial {
+            display:flex;
+            justify-content: center;
+            align-content:center;
+            text-align: justify;
+            padding   : 10px 5%;
+}
+@media (max-width: 500px) {
+  .container1{
+        display:flex;
+        flex-direction: column;
+        align-content:center;
+  }
+  .testimonial {
+  width : 80%;
+  margin: 8% auto;
+  text-align: center;
+  }
+}
+
+/* ABOUT STYLING */
+.aboutcontainertop {
+  margin-top: 50px;
+}
+.aboutcontainer {
+    margin         : 60px 30px;
+    display        : flex;
+    justify-content: space-around;
+  }
+.aboutcontainer1{
+  display        : flex;
+  justify-content: space-around;
+  align-content: center;
+}
+.aboutcontainer1 .pros-cons{
+  width:50%;
+}
+.contents{
+  width:50%;
+  display:inline-block;
+  margin-top:2rem;
+  filter:grayscale(100%); 
+}
+.contents .pros-cons:before{
+  content:'';
+  position:absolute;
+  z-index:-1;
+  transition:all 0.30s;
+}
+.pros-cons {
+  width:50%;
+  background:white;
+  padding:1rem;
+  box-shadow: 0 0.5rem 1rem gray;
+  display:flex;
+  flex-direction: column;
+  align-content: center;
+  margin: auto;
+}
+.pros-cons img{
+  max-width:100%;
+  height:auto;
+}
+.contents:hover{
+  filter:grayscale(0%);
+   transform: rotate(0);
+  -ms-transform: scale(1.2); 
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2); 
+}
+/* .pros-cons img {
+  width : 70%;
+  margin: 0 auto;
+} */
+/* .pros-cons {
+    width: 33%;
+    display:flex;
+    flex-direction: column;
+    align-content: center;
+    margin: 20px 0;
+} */
+.uses h3 {
+    font-size : 1.3rem;
+    padding   : 5px;
+    text-align: center;
+}
+.uses h4 {
+    font-size : 1rem;
+    padding   : 5px;
+    text-align: center;
+}
+.pros-cons .pros-cons {
+    display:flex;
+    justify-content: center;
+    align-content: center;
+    text-align: justify;
+    /* padding   : 10px 5%; */
+}
+div.one{ transform: rotate(10deg);}
+div.two{
+   transform: rotate(-10deg);
+}
+
+/* ABOUT STYLING */
+@media (max-width: 500px) {
+    .aboutContainer{
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+    }       
+    .pros-cons {
+    width : 80%;
+    margin: 8% auto;
+    text-align: center;
+    }
+}
+
+/* FOOTER STYLING */
+.footer {
+    background-color: white;
+    padding         : 5% 40%;
+    text-align: center;
+}
+.footer nav {
+        display        : flex;
+        justify-content: space-evenly;
+}
+.footer nav:hover {
+        background-color: black;
+        color           : red;
+}
+/* JOIN US/TEAM STYLING */
+.topcontent {
+  border: 10px solid #F5F5F5;
+}
+#h11 {
+      font-size  : 2rem;
+      font-weight: bold;
+      padding: 10px 20px;
+}
+#h12 {
+  font-size  : 2rem;
+  font-weight: bold;
+  padding: 10px 50px;
+}
+.content {
+  margin         : 20px 0;
+  padding        : 20px 20px;
+  border-top     : 1px dashed #C0C0C0;
+  display        : flex;
+  justify-content: space-between;
+  flex-wrap      : wrap;
+  align-items    : center;
+}
+  .text {
+    width        : 48%;
+    padding-right: 2%;
+    padding-left: 0;
+    display        : flex;
+    flex-direction: column;
+  }
+  .image {
+      width       : 48%;
+      padding-left: 2%;
+      padding-right: 0;
+      display: flex;
+      justify-content: center;
+  }
+  .image img {
+    width: 48%;
+    border-radius: 10px;
+  }
+.inverse-content {
+  padding-bottom : 30px;
+  padding        : 20px 20px;
+  border-top     : 1px dashed #C0C0C0;
+  display        : flex;
+  justify-content: space-between;
+  flex-wrap      : wrap;
+  align-items    : center;
+}
+  .text {
+      width        : 48%;
+      padding-left : 1%;
+      padding-right: 0;
+  }
+
+  .image {
+      width        : 48%;
+      padding-right: 1%;
+      padding-left : 0;
+  }
+
+  .image img {
+      border-radius: 10px;
+  }
+
+#footerDiv{
+      border    : 10px solid #F5F5F5;
+      margin-top: 60px;
+      width     : 100%;
+}
+#footerP{
+          width     : 100%;
+          text-align: center;
+}
+.UserList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+h1 {
+  /* color: white; */
+  text-align: center;
+}
+.UserCard p {
+  margin: 6px auto;
+}
+.UserCard {
+  background-color: rgba(255,255,255, 0.2);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid;
+  border-radius: 5px;
+  margin: 1% 1%;
+  padding: 10px;
+  width: 30%;
+}
+.UserCard button {
+  width: 50%;
+  margin: 6px auto;
+}
+.section {
+  height: 100%;
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+}
+.section:last-of-type {
+  background-image: url(./assets/replate16.jpeg);
+  /* filter: grayscale(100%) sepia(100%) hue-rotate(90deg); */
+}

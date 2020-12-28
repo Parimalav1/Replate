@@ -1,0 +1,231 @@
+/* DONORLIST STYLING */
+
+/* .donors{
+  background: linear-gradient(to right, #b4cfbb, #346541);
+} */
+/* VOLUNTEERPICKUP STYLING */
+/* .volunteersLink{
+  background: linear-gradient(to right, #ecf3ee, #346541);
+} */
+/* VOLUNTEERPICKUP & FOODCARD STYLING */
+table {
+  border-spacing: 2px;
+  border-collapse: collapse;
+  padding: 0.5rem;
+  text-align: left;
+  margin: auto;
+  background: linear-gradient(to right, #ecf3ee, 50%, #346541);
+}
+thead {
+  display: table-header-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+/* tr {
+  background: #f4f7f8;
+}
+tr:nth-child(even) {
+  background: #e8eeef;
+} */
+td, th {
+  width: 135px;
+  border: 1px solid #fff;
+  padding: 0.5rem;
+  text-align: center;
+  height: 50px;
+}
+.select {
+  border-color: 1px solid black;
+  margin: 1% auto;
+  padding: 10px 20px;
+}
+.foodInput input{
+  border:0.5px solid black;
+  margin: auto;
+  padding: 10px 20px;
+}
+#link{
+  text-decoration: none;
+  color: #fff;
+  position: relative;
+  display: inline-block;
+  width: 400px;
+  height: 70px;
+  margin: auto;
+  overflow: hidden;
+}
+
+#link:nth-child(3) {
+  overflow: visible;
+  position: relative;
+  top: -20px;
+}
+svg {
+  width: 400px;
+  height: 70px;
+}
+span {
+  font-size: 1.5rem;
+}
+#link rect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  stroke-width: 3px;
+  stroke-dashoffset: 400px;
+  stroke: #346541;
+}
+
+#link span {
+  color: #346541;
+  width: 400px;
+  height: 70px;
+  display: inline-block;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  line-height: 70px;
+  transition: all .2s linear;
+}
+
+#link span:hover {
+  color: #fff;
+  background: #346541;
+  transition: all 1s cubic-bezier(1.25s 0, 1.15, 1, 1);
+  transition-delay: .5s;
+}
+
+#link:nth-child(1):hover rect {
+  animation: draw1 .75s linear forwards;
+}
+
+@keyframes draw1 {
+  0% {
+      stroke-dasharray: 500;
+      stroke-dashoffset: 700;
+      stroke-width: 2px;
+  }
+  75% {
+      stroke-dasharray: 900;
+      stroke-width: 2px;
+  }
+  100% {
+      stroke-dasharray: 900;
+      stroke-width: 2px;
+  }
+}
+.animate{
+	transition: all 0.1s;
+	-webkit-transition: all 0.1s;
+}
+.postBtn{
+  width: 225px;
+	position: relative;
+  padding: 10px 20px;
+  margin: 3% auto;
+  margin-bottom: 8%;
+	border-radius: 8px;
+	font-size: 16px;
+  text-decoration: none;
+  border: none;	
+}
+.yellow{
+	background-color: #ffc966;
+  border-bottom: 5px solid #cc8400;
+  box-shadow: 5px 3px 3px #D1B358;
+  text-shadow: 0px -2px #D1B358;
+}
+.postBtn:active{
+	transform: translate(0px,5px);
+  -webkit-transform: translate(0px,5px);
+	border-bottom: 3px solid;
+}
+.fCardBtn {
+  border: none;
+  padding: 5px 10px;
+}
+.fCardBtn:hover {
+  background: #e59400;
+  color: white;
+}
+h2 {
+  margin-top: 25px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+.donateDiv {
+  height: 90%;
+  width: 100%;
+  top: 100px;
+  left: 0;
+  right: 0;
+  position: fixed;
+  background: url(./assets/replate15.jpeg);
+  background-repeat: no-repeat;
+  background-size  : cover;
+  /* filter: grayscale(100%) sepia(100%) hue-rotate(90deg); */
+  /* transform: rotate(90deg); */
+  /* margin-left: 10%; */
+  /* filter: blur(3px); */
+}
+.donorsLink {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  padding: 20px;
+  background-color: #ffffff; /* Fallback color */
+  background-color: rgba(255,255,255, 0.6); /* Black w/opacity/see-through */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 30%;
+  margin-top: 80px;
+};
+
+.rotateimg90 {
+  margin: 100px 0;
+  max-width: 100%;
+  -webkit-transform:rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.volunteersLink {
+  text-align: center;
+  margin-top: 50px;
+}
+.postFoodItemForm {
+  margin-top: 3%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid green;
+}
+.postFoodItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /* border: 1px solid black; */
+}
+.postFoodItemRow input{
+  border-radius: 8px;
+  width: 180px;
+  /* margin-left: 20%;
+  margin-right: 20%; */
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+.postFoodItemRow1 select{
+  border-radius: 8px;
+}
+.postFoodItem p {
+  text-align: center;
+  display: flex;
+  align-content: center;
+}
