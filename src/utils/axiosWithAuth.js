@@ -7,7 +7,7 @@ export const axiosWithAuth = () => {
     headers: {
       authorization: token
     },
-    // baseURL: "https://thereplate2.herokuapp.com/",
-    baseURL: "http://localhost:3300",
+    baseURL: "https://thereplate2.herokuapp.com",
+    // baseURL: "http://localhost:3300",
   });
 };
