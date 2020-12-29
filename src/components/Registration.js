@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { useForm, input } from "react-hook-form";
 import { axiosWithAuth } from "../utils/axiosWithAuth";
 import { object, string} from "yup";
@@ -29,7 +29,7 @@ const initialDisabled = true
 const Registration = (props) => {
     // state
     const [users, setUsers] = useState(initialUsers)
-    const [formErrors, setFormErrors] = useState(initialFormErrors)
+    const [formErrors] = useState(initialFormErrors)
     const [formValues, setFormValues] = useState(initialFormValues)
     const [disabled, setDisabled] = useState(initialDisabled);
 
@@ -80,7 +80,7 @@ const Registration = (props) => {
               .required("Address is required"),
     });
   
-    const { register, handleSubmit } = useForm({
+    const { handleSubmit } = useForm({
       validationSchema: schema,
     });
 
@@ -111,7 +111,7 @@ const Registration = (props) => {
         schema.isValid(formValues).then(valid => {
           setDisabled(!valid);
         });
-    }, [formValues]);
+    }, [formValues, schema]);
 
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
@@ -127,7 +127,7 @@ const Registration = (props) => {
                       onChange={onInputChange}
                   />
                 </div>
-                    {/* <div className="loginError">{formErrors.first_name}</div> */}
+                    <div className="loginError">{formErrors.first_name}</div>
                   <div className="inputC">
                     <input 
                       required
@@ -137,7 +137,7 @@ const Registration = (props) => {
                       onChange={onInputChange}
                     />
                   </div>
-                        {/* <div className="loginError">{formErrors.username}</div> */}
+                        <div className="loginError">{formErrors.username}</div>
                     <div className="inputC">
                       <input 
                         required
@@ -147,7 +147,7 @@ const Registration = (props) => {
                         type='password'
                       />
                     </div>
-                    {/* <div className="loginError">{formErrors.password}</div> */}
+                    <div className="loginError">{formErrors.password}</div>
                     <div className="inputC">
                       <input 
                           required
@@ -157,7 +157,7 @@ const Registration = (props) => {
                           onChange={onInputChange}
                       />
                     </div>
-                    {/* <div className="loginError">{formErrors.last_name}</div> */}
+                    <div className="loginError">{formErrors.last_name}</div>
                     <div className="inputC">
                       <input 
                           required
@@ -167,8 +167,7 @@ const Registration = (props) => {
                           onChange={onInputChange}
                       />
                     </div>
-                    {/* <div className="loginError">{formErrors.email}</div> */}
-                {/* <Link to='/login'><p id='login'>Login</p></Link> */}
+                    <div className="loginError">{formErrors.email}</div>
                 <button className="btn" disabled={disabled}>Register</button>
                 <p id="para-one">{formErrors.username}</p>
                 <p id="para-two">{formErrors.password}</p>

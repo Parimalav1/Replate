@@ -1,10 +1,8 @@
-import React, { useState, useEffect } from "react";
-// import { useHistory } from "react-router-dom";
+import React, { useState } from "react";
 import { connect } from "react-redux";
 import { food } from "../store/actions";
 
 const UpdateFood = (props)  => {
-    // const { push } = useHistory();
     const [values, setValues] = useState({
         name: props.name,
         quantity: props.quantity,

@@ -4,19 +4,18 @@ import {food} from '../store/actions';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import UpdateFood from './UpdateFood';
-import { useAlert } from 'react-alert';
 import Moment from 'react-moment';
 
 const FoodCard = (props) => {
     const [dateOfPickup, setDateOfPickup] = useState(new Date());
     const [pickingFood, setPickingFood] = useState(false);
     const [editing, setEditing] = useState(false);
-    const alert = useAlert();
+    const getAFoodItem = props.fetchFood;
 
     useEffect(()=> {
         // console.log('FetchFood:', props.id)
-        props.fetchFood(props.id);
-    }, []);
+        getAFoodItem(props.id);
+    }, [props.id]);
 
     const handleCalendar = (d) =>{
         setDateOfPickup(d);
@@ -73,7 +72,6 @@ const FoodCard = (props) => {
     }
 
     const renderPickupTime = () => {
-        var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', min: '2-digit' };
         let pickupTime = '';
         if (props.foodItems && props.foodItems[props.id] && props.foodItems[props.id]['pickupTime']) {
             pickupTime =  new Date(props.foodItems[props.id]['pickupTime']);

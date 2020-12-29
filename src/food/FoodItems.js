@@ -18,10 +18,10 @@ const FoodItems = (props) => {
         .catch(err => console.log('ERROR'));
     }
 
+    const getAllFoodItems = props.fetchAllFoods;
     useEffect(() => {
         getFoodItems();
-        props.fetchAllFoods();
-        // food.fetchFood();
+        getAllFoodItems();
     }, []);
 
     if (!foodList.length) {

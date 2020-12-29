@@ -12,57 +12,20 @@ import { useAlert } from 'react-alert';
 import { login } from '../store/actions';
 import {connect} from 'react-redux';
 
-// styles for the login
-const I = styled.i`
-  padding: 0px 5px;
-`;
-const DivFormGroup = styled.div`
-  width: 30%;
-  margin: 200px 35% 0;
-  padding: 0 10px;
-  border: 1px solid #173d53;
-  background-color: #25b3a7;
-  color: #173d53;
-  border-radius: 5px;
-`;
-
-const DivLabel = styled.div`
-  margin: 20px 0;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-`;
-const DivButton = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  backgoundcolor: "green";
-`;
-const Button = styled.button`
-  margin: 0px auto;
-  font-size: 1.1rem;
-  padding: 2px 10px;
-`;
-
 const H4 = styled.h4`
   margin: 5px auto;
   padding: 0;
 `;
 
-const eye = <FontAwesomeIcon icon={faEye} />;
+// const eye = <FontAwesomeIcon icon={faEye} />;
 
 const initialLoginValues={
-    username: '',
-    password: '',
-}
-const initialLoginErrors = {
     username: '',
     password: '',
 }
 
 function LoginFormInner(props) {
     const [loginValues, setLoginValues] = useState(initialLoginValues);
-    const [formErrors, setFormErrors] = useState(initialLoginErrors);
     const [disabled, setDisabled] = useState(false);
     const [passwordShown, setPasswordShown] = useState(false);
     // const { addToast } = useToasts();
@@ -70,7 +33,6 @@ function LoginFormInner(props) {
     const alert = useAlert();
 
     const onSubmit = event => {
-        event.preventDefault();
         getUserData();
         setLoginValues(initialLoginValues)
     };
@@ -84,7 +46,7 @@ function LoginFormInner(props) {
                 .required("Should be a mix of letters and numbers"),
     });
     
-      const { register, handleSubmit } = useForm({
+      const { handleSubmit } = useForm({
         validationSchema: schema,
     });
 
@@ -109,9 +71,10 @@ function LoginFormInner(props) {
             .get('api/users')
             .then(res => {
                 res.data.map(x => {
-                    if(x.username === loginValues.username) {
+                     if(x.username === loginValues.username) {
                         localStorage.setItem('userId', x.id)
                     }
+                    return x
                 })
                 //addToast('Saved Successfully', { appearance: 'success' })
             })
@@ -130,10 +93,10 @@ function LoginFormInner(props) {
         schema.isValid(loginValues).then((valid) => {
             setDisabled(!valid);
         });
-    }, [loginValues]);
+    }, [loginValues, schema]);
 
     return (
-        <form  onSubmit={onSubmit}>
+        <form onSubmit={handleSubmit(onSubmit)}>
             <div className="form-container">
             </div>
             <div className='form-div'>
@@ -147,7 +110,6 @@ function LoginFormInner(props) {
                         value={loginValues.username}
                         onChange={onInputChange}
                     />
-                    {/* <div className="loginError">{formErrors.username}</div> */}
                 </div>
                 <div className="inputC" >
                     <input
@@ -158,7 +120,6 @@ function LoginFormInner(props) {
                         name="password"
                         type={passwordShown ? "text" : "password"}  
                     />  
-                    {/* <div className="loginError">{formErrors.password}</div> */}
                     {/* <I onClick={togglePasswordVisiblity}>{eye}</I> */}
                     <FontAwesomeIcon onClick={togglePasswordVisiblity} icon={faEye} />
 

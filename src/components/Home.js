@@ -18,7 +18,7 @@ export default function Home(){
             <hr id='hr'/>
             <section className="container1">
                 <div className="testimonial">
-                    <img src="assets/replate7.jpeg" />
+                    <img src="assets/replate7.jpeg" alt=''/>
                     <div className="uses">
                         <h3>Volunteer Testimonial</h3>
                         <h4>Dave, IT professional</h4>
@@ -29,7 +29,7 @@ export default function Home(){
                     </div>
                 </div>
                 <div className="testimonial">
-                    <img src="assets/replate9.jpg" />
+                    <img src="assets/replate9.jpg" alt=''/>
                     <div className="uses">
                         <h3>Donor Testimonial</h3>
                         <h4>Angela, former teacher</h4>
@@ -39,7 +39,7 @@ export default function Home(){
                     </div>
                 </div>
                 <div className="testimonial">
-                    <img src="assets/replate10.jpg" />
+                    <img src="assets/replate10.jpg" alt=''/>
                     <div className="uses">
                         <h3>Receiver Testimonial</h3>
                         <h4>Claudia, Mom</h4>
@@ -51,9 +51,9 @@ export default function Home(){
             </section>
             <footer className="footer">
                 <nav>
-                    <a href="http://facebook.com" target="_blank"><i className="fab fa-facebook-f fa-2x"></i></a>
-                    <a href="http://instagram.com" target="_blank"><i className="fab fa-instagram fa-2x"></i></a>
-                    <a href="http://twitter.com" target="_blank"><i className="fab fa-twitter fa-2x"></i></a>
+                    <a href="http://facebook.com" target="_blank" rel="noreferrer"><i className="fab fa-facebook-f fa-2x"></i></a>
+                    <a href="http://instagram.com" target="_blank" rel="noreferrer"><i className="fab fa-instagram fa-2x"></i></a>
+                    <a href="http://twitter.com" target="_blank" rel="noreferrer"><i className="fab fa-twitter fa-2x"></i></a>
                 </nav>
             </footer>
         </div>

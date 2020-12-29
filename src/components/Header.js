@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { connect } from 'react-redux';
 import {login} from '../store/actions';
@@ -19,7 +19,7 @@ const Header = (props) => {
     if (localStorage.getItem('token')) {
       props.updateLoginState(true);
     }
-  }, [])
+  }, [props])
 
   console.log('Header state:', props.loggedIn)
   return (

@@ -13,9 +13,9 @@ const Users = (props) => {
         .get('/api/users')
         .then((res) => {
             setUsers(res.data)
-            let donors = res.data.filter(x => x.id != 1 && (x.role === 'donor' || x.role === 'both'))
+            let donors = res.data.filter(x => x.id !== 1 && (x.role === 'donor' || x.role === 'both'))
             setDonorList(donors)
-            let volunteers = res.data.filter(y => y.id != 1 && (y => y.role === 'volunteer' || y.role === 'both'))
+            let volunteers = res.data.filter(y => y.id !== 1 && (y => y.role === 'volunteer' || y.role === 'both'))
             setVolunList(volunteers)
         })
         .catch(err => console.log('ERROR'));
