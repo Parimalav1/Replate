@@ -18,10 +18,14 @@ const FoodItems = (props) => {
         .catch(err => console.log('ERROR'));
     }
 
-    const getAllFoodItems = props.fetchAllFoods;
+    const getAllFoodItems = () => {
+        props.fetchAllFoods();
+    }
+
     useEffect(() => {
         getFoodItems();
         getAllFoodItems();
+        // eslint-disable-next-line
     }, []);
 
     if (!foodList.length) {

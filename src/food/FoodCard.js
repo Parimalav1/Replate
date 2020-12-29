@@ -10,12 +10,16 @@ const FoodCard = (props) => {
     const [dateOfPickup, setDateOfPickup] = useState(new Date());
     const [pickingFood, setPickingFood] = useState(false);
     const [editing, setEditing] = useState(false);
-    const getAFoodItem = props.fetchFood;
 
     useEffect(()=> {
         // console.log('FetchFood:', props.id)
-        getAFoodItem(props.id);
-    }, [props.id]);
+        getAFoodItem();
+        // eslint-disable-next-line
+    }, []);
+
+    const getAFoodItem = () => {
+        props.fetchFood(props.id);
+    }
 
     const handleCalendar = (d) =>{
         setDateOfPickup(d);
