@@ -1,4 +1,9 @@
 import React from 'react';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { fab } from '@fortawesome/free-brands-svg-icons' ;
+
+library.add(fab);
 
 export default function Team(){
     return(
@@ -38,6 +43,13 @@ export default function Team(){
                         E-mail: help@replate.co<br/>
                         Phone: (415)555-1234<br/>
                     </p>
+                </div>
+                <div className="footer">
+                    <nav>
+                        <a href="http://facebook.com" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={['fab', 'facebook-f']} size='3x'/></a>
+                        <a href="http://instagram.com" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={["fab", "instagram"]} size='3x'/></a>
+                        <a href="http://twitter.com" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={["fab", "twitter"]} size='3x'/></a>
+                    </nav>
                 </div>
             </footer>
         </div>

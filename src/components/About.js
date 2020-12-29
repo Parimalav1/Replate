@@ -1,4 +1,9 @@
 import React from 'react';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { fab } from '@fortawesome/free-brands-svg-icons' ;
+
+library.add(fab); 
 
 export default function Team(){
     return(
@@ -18,7 +23,7 @@ export default function Team(){
                         <img src="assets/replate-team-2.jpeg" alt=''/>
                         <div className="uses">
                             <h3>Gordon Caister</h3>
-                            <h4>API Backend Engineer, Lambda School</h4>
+                            <h4>Backend Engineer, Lambda School</h4>
                         </div>
                     </div>
                 </div>
@@ -54,11 +59,11 @@ export default function Team(){
                     </div>
                 </div>
             </section>
-            <footer className='footer'>
+            <footer className="footer">
                 <nav>
-                    <a href="http://facebook.com" target="_blank" rel="noreferrer"><i className="fab fa-facebook-f fa-2x"></i></a>
-                    <a href="http://instagram.com" target="_blank" rel="noreferrer"><i className="fab fa-instagram fa-2x"></i></a>
-                    <a href="http://twitter.com" target="_blank" rel="noreferrer"><i className="fab fa-twitter fa-2x"></i></a>
+                    <a href="http://facebook.com" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={['fab', 'facebook-f']} size='3x'/></a>
+                    <a href="http://instagram.com" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={["fab", "instagram"]} size='3x'/></a>
+                    <a href="http://twitter.com" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={["fab", "twitter"]} size='3x'/></a>
                 </nav>
             </footer>
         </div>

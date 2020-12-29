@@ -1,21 +1,15 @@
-// form for the login
 import React, { useState, useEffect } from 'react';
 import { axiosWithAuth } from '../utils/axiosWithAuth';
 import {Link, useHistory} from 'react-router-dom';
 import { useForm } from "react-hook-form";
 import * as yup from 'yup';
-import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
 import { ToastProvider } from 'react-toast-notifications';
 import { useAlert } from 'react-alert';
 import { login } from '../store/actions';
 import {connect} from 'react-redux';
-
-const H4 = styled.h4`
-  margin: 5px auto;
-  padding: 0;
-`;
+import '../login.css';
 
 // const eye = <FontAwesomeIcon icon={faEye} />;
 
@@ -96,10 +90,10 @@ function LoginFormInner(props) {
     }, [loginValues, schema]);
 
     return (
-        <form onSubmit={handleSubmit(onSubmit)}>
-            <div className="form-container">
-            </div>
-            <div className='form-div'>
+        <div>
+            <div className="loginFormDiv">
+                <form onSubmit={handleSubmit(onSubmit)}>
+
                 <h2>LOGIN</h2>
                 <div className="inputC">
                     <input 
@@ -120,21 +114,24 @@ function LoginFormInner(props) {
                         name="password"
                         type={passwordShown ? "text" : "password"}  
                     />  
-                    {/* <I onClick={togglePasswordVisiblity}>{eye}</I> */}
                     <FontAwesomeIcon onClick={togglePasswordVisiblity} icon={faEye} />
-
                 </div>
                 <div className="inputC">
                     <button type="submit" className='btn'disabled={disabled} >
                         Submit
                     </button>
                 </div>
-                <H4>
+                <h4 className='h4'>
                     Not a user?  <Link className="links" to="/register">Signup</Link>
-                </H4>
+                </h4>
                 <Link to='/register'><p>Create an account</p></Link>
+                </form>
             </div>
-        </form>
+            <div className="loginFormContainer">
+                <p></p>
+            </div>
+        </div>
+
     );
 };
 

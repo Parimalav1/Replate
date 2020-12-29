@@ -5,7 +5,6 @@ import { axiosWithAuth } from "../utils/axiosWithAuth";
 import { object, string} from "yup";
 import { login } from '../store/actions';
 import {connect} from 'react-redux';
-// import { RegStyles, ErrStyles } from '../styles/StyledRegistration';
 
 // initial values
 const initialFormValues = {

@@ -30,7 +30,7 @@ const Header = (props) => {
           </div>
           <div className="header-container">
             { props.loggedIn && <div className="navele">
-               <button onClick={handleLogout}>Logout</button>
+               <button className='logout' onClick={handleLogout}>Logout</button>
               </div>
             }
             { !props.loggedIn && <div className="navele">
