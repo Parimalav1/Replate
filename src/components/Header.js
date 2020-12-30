@@ -44,6 +44,9 @@ const Header = (props) => {
             <div className="navele">
               <Link to="/home">Home</Link>
             </div>
+            <div className="navele">
+              <Link to="/design">Design</Link>
+            </div>
             <div className="navele line">
               <Link to="/teamUp">Join Us</Link>
             </div>

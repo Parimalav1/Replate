@@ -16,6 +16,8 @@ import FoodItems from './food/FoodItems';
 import { connect } from "react-redux";
 import './App.css';
 import './VolDonor.css';
+import './design.css';
+import Design from './components/Design';
 
 function App() {
   
@@ -24,6 +26,7 @@ function App() {
       <div className="App">
         <Header />
         <Switch>
+          <Route exact path='/design' component={Design} />
           <Route exact path='/home' component={Home} />
           <Route exact path='/teamup' component={Team} />
           <Route exact path='/about' component={About} />
