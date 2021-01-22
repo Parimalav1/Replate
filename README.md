@@ -3,14 +3,17 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 # Replate - Full-stack developer
-Deployed thru netlify - 
+
+Deployed through netlify - 
 
 # Tech stack
 
 Frontend
+
 The app is created with React.js and Redux for state management.
 
 Backend
+
 Express - all the routes
 
 
