@@ -4,13 +4,14 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # Replate - Full-stack developer
 
+The app was partially created as a part of projects in Lambda school.
 Deployed through netlify - 
 
 # Tech stack
 
 Frontend
 
-The app is created with React.js and Redux for state management.
+The frontend part is created with React.js and Redux for state management and The UI and backend were connected to make a complete app.
 
 Backend
 
