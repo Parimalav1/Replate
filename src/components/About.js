@@ -5,7 +5,7 @@ import { fab } from '@fortawesome/free-brands-svg-icons' ;
 
 library.add(fab); 
 
-export default function Team(){
+export default function About(){
     return(
         <div className="aboutcontainertop">
             <section className="aboutcontainer"> 

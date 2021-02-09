@@ -4,7 +4,7 @@ import Header from './components/Header';
 import PrivateRoute from "./components/PrivateRoute";
 import Registration from './components/Registration';
 import Login from './components/Login';
-import Home from './components/Home';
+// import Home from './components/Home';
 import Team from './components/Team';
 import About from './components/About';
 import Users from './components/Users';
@@ -27,7 +27,7 @@ function App() {
         <Header />
         <Switch>
           <Route exact path='/design' component={Design} />
-          <Route exact path='/home' component={Home} />
+          {/* <Route exact path='/home' component={Home} /> */}
           <Route exact path='/teamup' component={Team} />
           <Route exact path='/about' component={About} />
           <Route exact path='/login' component={Login} />
@@ -39,7 +39,7 @@ function App() {
           <PrivateRoute exact path='/donorsFood' component={DonorsFood} />
           <PrivateRoute exact path='/donorList' component={DonorList} />
           <Route path='/'>
-            <Redirect to='/home' />
+            <Redirect to='/design' />
           </Route>
         </Switch>
       </div>

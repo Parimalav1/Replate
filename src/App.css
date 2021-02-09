@@ -105,26 +105,46 @@
   border-right: 1px solid black;
 } 
 /* HOME STYLING */
-.title-container {
-  background       : url(./assets/replate11.jpg);
+.outerDiv{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  /* background-color:#fce7cb; */
+  background-color:#ffdfa6;
+  margin-top: 20px;
+}
+.design1 {
+  background       : url(./assets/replate15.jpeg);
   background-repeat: no-repeat;
   background-size  : cover;
-  background-color : white;
   width            : 100%;
-  height           : 70vh;
-  padding          : 10px 0 20px;
+  height: 60vh;
+  margin: 200px 0 0;
   display: flex;
-  justify-content: flex-end;
-  }
-#pDiv {
-    height: 10vh;
 }
-.title-container p {
-  padding         : 10px 10px;
-  color           : black;
+#p-div{
+  position: absolute;
+}
+#p-div p {
+  border: 1px solid black;
+  padding         : 10px 20px;
+  color: black;
   background-color: white;
   font-size       : 1.2rem;
-  margin-right    : 20px;
+  font-weight: bold;
+  margin-left    : 20px;
+  text-align: center;
+}
+#innerDiv { 
+  width: 150%; 
+  display: flex;
+  justify-content: flex-end;
+}
+#innerDiv img{
+  margin-top: 40px;
+  margin-right: 40px;
+  width: 150%;
+  height: 60vh;
 }
 #container {
   padding: 0 20px;
@@ -192,6 +212,94 @@
   text-align: center;
   }
 }
+
+/* .title-container {
+  background       : url(./assets/replate11.jpg);
+  background-repeat: no-repeat;
+  background-size  : cover;
+  background-color : white;
+  width            : 100%;
+  height           : 70vh;
+  padding          : 10px 0 20px;
+  display: flex;
+  justify-content: flex-end;
+  }
+#pDiv {
+    height: 10vh;
+}
+.title-container p {
+  padding         : 10px 10px;
+  color           : black;
+  background-color: white;
+  font-size       : 1.2rem;
+  margin-right    : 20px;
+}
+#container {
+  padding: 0 20px;
+  line-height: 1.8;
+}
+#container h2 {
+  font-size: 3rem;
+}
+#hr {
+  width        : 100%;
+  padding      : 20px 0;
+  border       : none;
+  border-bottom: 1px dashed black;
+}
+.container1 {
+  margin         : 0 20px;
+  display        : flex;
+  justify-content: space-around;
+}
+.testimonial {
+  background-color: #F5F5F5;
+  width: 50%;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content:center;
+  text-align: justify;
+  padding   : 10px 3%;
+  margin: 10px 1px;
+}
+.uses h3 {
+  font-size : 1.4rem;
+  padding   : 20px;
+  width     : 100%;
+  text-align: center;
+}
+.uses h4 {
+  font-size : 1.2rem;
+  padding   : 10px;
+  width     : 100%;
+  text-align: center;
+}
+.uses p {
+  text-align: justify;
+  width     : 100%;
+  font-size : 1rem;
+  line-height: 1.5;
+  padding   : 10px;
+}
+.testimonial img {
+  width : 100%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+@media (max-width: 500px) {
+  .container1{
+        display:flex;
+        flex-direction: column;
+        align-content:center;
+  }
+  .testimonial {
+  width : 80%;
+  margin: 8% auto;
+  text-align: center;
+  }
+} */
 
 /* ABOUT STYLING */
 .aboutcontainertop {
@@ -293,7 +401,7 @@ div.two{
 /* FOOTER STYLING */
 .footer {
   width: 20%;
-  border: 1px solid #ffe4b2;
+  border: 0.5px solid #ffe4b2;
   background-color: white;
   padding         : 2% 40%;
   text-align: center;
