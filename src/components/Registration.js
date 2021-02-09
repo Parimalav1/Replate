@@ -94,15 +94,14 @@ const Registration = (props) => {
 
     // form functionality
     const onSubmit = (e) => {
-        //e.preventDefault()
-        const newUser = {
-          name: formValues.name.trim(),
-          username: formValues.username.trim(),
-          password: formValues.password.trim(),
-          phoneNumber: formValues.phoneNumber.trim(),
-          address: formValues.address.trim(),
-        } 
-        postNewUser(newUser)
+      const newUser = {
+        name: formValues.name.trim(),
+        username: formValues.username.trim(),
+        password: formValues.password.trim(),
+        phoneNumber: formValues.phoneNumber.trim(),
+        address: formValues.address.trim(),
+      } 
+      postNewUser(newUser)
     };  
 
     //side effects

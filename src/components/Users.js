@@ -31,17 +31,15 @@ const Users = (props) => {
 
     return (
         <div className="UserList">
-            {/* <div className='section'> */}
-                {props.showVolunteers && props.showDonors && users.map(x => {
-                    return <UserCard key={x.id} user={x} />
-                })}
-                {props.showVolunteers && !props.showDonors && volunList.map(x => {
-                    return <UserCard key={x.id} user={x} />
-                })}
-                {!props.showVolunteers && props.showDonors && donorList.map(x => {
-                    return <UserCard key={x.id} user={x} />
-                })}
-            {/* </div> */}
+            {props.showVolunteers && props.showDonors && users.map(x => {
+                return <UserCard key={x.id} user={x} />
+            })}
+            {props.showVolunteers && !props.showDonors && volunList.map(x => {
+                return <UserCard key={x.id} user={x} />
+            })}
+            {!props.showVolunteers && props.showDonors && donorList.map(x => {
+                return <UserCard key={x.id} user={x} />
+            })}
       </div>
     )
 };

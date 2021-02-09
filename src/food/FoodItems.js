@@ -1,10 +1,8 @@
 import React, {useState, useEffect} from 'react';
-// import { connect } from "react-redux";
 import FoodCard from './FoodCard';
 import {axiosWithAuth} from '../utils/axiosWithAuth';
 import { connect } from "react-redux";
 import {food} from '../store/actions';
-// import { food } from "../store/actions";
 
 const FoodItems = (props) => {
     const [foodList, setFoodList] = useState([]);

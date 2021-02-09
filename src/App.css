@@ -1,4 +1,5 @@
 * {
+  /* border: 2px solid black; */
   color: #100a08;
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -41,6 +42,22 @@
   justify-content: space-between;
   align-content: center;
 };
+
+#heart {
+  display: flex;
+}
+
+#heart img {
+  width: 60px;
+  height: auto;
+  margin-left: 20px;
+  animation: heartbeat .6s infinite alternate;
+	transform-origin: center;
+}
+@keyframes heartbeat{
+	to { transform: scale(1.1); }
+}
+
 #h1 {
   width: 40%;
 }
@@ -49,7 +66,7 @@
   width: 90px;
   font-size: 3rem;
   margin: 0px;
-  padding: 0 40px;
+  padding: 0 10px;
 }
 .header-container {
   display: flex;
@@ -65,16 +82,19 @@
   display: flex;
   justify-content: center;
   align-content: center;
-  width: 120px;
+  width: 100px;
   color          : #262626;
   text-decoration: none;
   padding        : 4px 2px;
   font-size      : 1.2rem;
   font-weight: bold;
 }
+.design{
+  border-left : 1px solid black;
+}
 .logout{
   font-family: 'Langar';
-  width: 120px;
+  width: 100px;
   color          :#262626;
   text-decoration: none;
   padding        : 4px 2px;
@@ -310,7 +330,7 @@ div.two{
   flex-wrap      : wrap;
   align-items    : center;
 }
-.text {
+.text1 {
   line-height: 1.5;
   width        : 48%;
   padding-right: 2%;
@@ -318,40 +338,44 @@ div.two{
   display        : flex;
   flex-direction: column;
 }
-.image {
+.image1 {
   width       : 48%;
   padding-left: 2%;
   padding-right: 0;
   display: flex;
   justify-content: center;
 }
-.image img {
-  width: 48%;
+.image1 img {
+  width: 60%;
   border-radius: 10px;
 }
 .inverse-content {
   padding        : 20px 20px;
   border-top     : 1px dashed #C0C0C0;
   display        : flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap      : wrap;
   align-items    : center;
 }
-.text {
+.text2 {
   line-height: 1.5;
   width        : 48%;
   padding-left : 1%;
   padding-right: 0;
 }
 
-.image {
+.image2 {
   width        : 48%;
-  padding-right: 1%;
-  padding-left : 0;
+  padding: 0 10px;
+  border-radius: 10px;
 }
 
-.image img {
-    border-radius: 10px;
+.image2 img {
+  width: 70%;
+  border-radius: 25px;
+  background-color: green;
+  background-blend-mode: screen;
+  padding: 0 10px;
 }
 
 #footerDiv{
@@ -378,9 +402,11 @@ h1 {
 }
 .UserCard p {
   margin: 6px auto;
+  /* color: white; */
 }
 .UserCard {
-  background-color: rgba(255,255,255, 0.2);
+  background-color:   #ffc966;
+  /* background-color: rgba(255,255,255, 0.2); */
   display: flex;
   flex-direction: column;
   border: 1px solid;
@@ -388,6 +414,8 @@ h1 {
   margin: 1% 1%;
   padding: 10px;
   width: 30%;
+  height: 25vh;
+  opacity: 0.6;
 }
 .UserCard button {
   width: 50%;
@@ -406,5 +434,4 @@ h1 {
 }
 .section:last-of-type {
   background-image: url(./assets/replate16.jpeg);
-  /* filter: grayscale(100%) sepia(100%) hue-rotate(90deg); */
 }

@@ -84,7 +84,6 @@ export default function PostFoodItem(){
                         <option value='Vegetables'>Vegetables</option>
                         <option value='Fruits'>Fruits</option>
                         <option value='Other'>Other</option>
-                        {/* <button className='Btn' onClick={handleChange}>Confirm</button> */}
                     </select>
                 </div>
                 <div className="postFoodItemRow">

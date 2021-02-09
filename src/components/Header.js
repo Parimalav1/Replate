@@ -23,45 +23,46 @@ const Header = (props) => {
 
   console.log('Header state:', props.loggedIn)
   return (
-    // <div >
-        <nav id='nav'>
-          <div id='h1'>
-            <h1>REPLATE</h1>
+    <nav id='nav'>
+      <div id="heart">
+        <img src="assets/replate13.png" alt='' />
+      </div>
+      <div id='h1'>
+        <h1>REPLATE</h1>
+      </div>
+      <div className="header-container">
+        { props.loggedIn && <div className="navele">
+            <button className='logout' onClick={handleLogout}>Logout</button>
           </div>
-          <div className="header-container">
-            { props.loggedIn && <div className="navele">
-               <button className='logout' onClick={handleLogout}>Logout</button>
-              </div>
-            }
-            { !props.loggedIn && <div className="navele">
-                <Link to='/register'>Signup</Link>
-              </div>
-            }
-            { !props.loggedIn && <div className="navele line">
-                <Link to='/login'>Login</Link>
-              </div>
-            }
-            <div className="navele">
-              <Link to="/home">Home</Link>
-            </div>
-            <div className="navele">
-              <Link to="/design">Design</Link>
-            </div>
-            <div className="navele line">
-              <Link to="/teamUp">Join Us</Link>
-            </div>
-            <div className="navele">
-              <Link to="/about">About Us</Link>
-            </div>
-            <div className="navele line">
-              <Link to='/volunteerPickup'>Volunteer</Link>
-            </div>
-            <div className="navele">
-              <Link to='/donorsFood'>Donate</Link>
-            </div>
+        }
+        { !props.loggedIn && <div className="navele">
+            <Link to='/register'>Signup</Link>
           </div>
-        </nav>
-    // </div>
+        }
+        { !props.loggedIn && <div className="navele line">
+            <Link to='/login'>Login</Link>
+          </div>
+        }
+        <div className="navele">
+          <Link to="/home">Home</Link>
+        </div>
+        <div className="navele design">
+          <Link to="/design">Design</Link>
+        </div>
+        <div className="navele line">
+          <Link to="/teamUp">Join Us</Link>
+        </div>
+        <div className="navele">
+          <Link to="/about">About Us</Link>
+        </div>
+        <div className="navele line">
+          <Link to='/volunteerPickup'>Volunteer</Link>
+        </div>
+        <div className="navele">
+          <Link to='/donorsFood'>Donate</Link>
+        </div>
+      </div>
+    </nav>
   );
 };
 

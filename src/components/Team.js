@@ -14,20 +14,20 @@ export default function Team(){
                 We give the leftover food to people in need of it, to homeless shelters, orphanages, senior homes etc.</p>
             </div>
             <section className="content">
-                <div className="text">
+                <div className="text1">
                     <h2 className='h12'>Volunteers</h2>
                     <p>These superheroes are ordinary people with hearts for giving and helping others. They dedicate their time and effort to local causes they're passionate about, positively impacting the lives of others in their communities. 
                         An opportunity to serve the community, it's a voluntary work, flexible timings. Nothing to lose, volunteering your time will have a big impact and will be rewarding in ways you never expected.</p>
                 </div>
-                <div className="image">
+                <div className="image1">
                     <img src="assets/replate3.jpeg" alt="Let's go on an adventure!" />
                 </div>
             </section>
             <section className="inverse-content">
-                <div className="image">
+                <div className="image2">
                     <img src="assets/replate2.jpeg" className="img-fluid rounded" alt="Lets have fun!" />
                 </div>
-                <div className="text">
+                <div className="text2">
                     <h2 className='h2'>Donors/Business</h2>
                     <p>You see the importance of making small changes close to home to make your community a better place to live.
                         Your help feeds thousands of people and reduce wastage of food and resources. An opportunity to serve the

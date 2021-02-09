@@ -1,13 +1,6 @@
 import React from 'react';
-// import styled from 'styled-components';
 import {Link} from 'react-router-dom';
 import PostFoodItem from '../food/PostFoodItem';
-
-// const Button = styled.button`
-//   margin: 0px auto;
-//   font-size: 1.1rem;
-//   padding: 2px 10px;
-// `;
 
 export default function DonorsFood(){
 

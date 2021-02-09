@@ -21,12 +21,7 @@ thead {
   vertical-align: middle;
   border-color: inherit;
 }
-/* tr {
-  background: #f4f7f8;
-}
-tr:nth-child(even) {
-  background: #e8eeef;
-} */
+
 td, th {
   width: 135px;
   border: 1px solid #fff;
@@ -168,9 +163,6 @@ h2 {
   background-repeat: no-repeat;
   background-size  : cover;
   z-index: -1;
-  /* filter: grayscale(100%) sepia(100%) hue-rotate(90deg); */
-  /* transform: rotate(90deg); */
-  /* margin-left: 10%; */
   /* filter: blur(3px); */
 }
 .donorsLink {
@@ -211,7 +203,6 @@ h2 {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  /* border: 1px solid black; */
 }
 .postFoodItemRow input{
   border-radius: 8px;

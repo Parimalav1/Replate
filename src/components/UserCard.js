@@ -1,11 +1,7 @@
 import React, {useState} from 'react';
-// import { connect } from "react-redux";
 import UpdateUser from './UpdateUser';
-// import { user } from "../store/actions";
-
 
  export default function UserCard (props) {
-    // const {id} = props;
     const [editing, setEditing] = useState(false);
     // console.log('UserCard:', props);
     
@@ -13,7 +9,6 @@ import UpdateUser from './UpdateUser';
     return (
         
         <div className="UserCard">
-            {/* <h2 id='number'>{props.user.id}</h2> */}
             <p >Name: {props.user.name}</p>
             <p>Username: {props.user.username}</p>
             <p>Address: {props.user.address}</p>
@@ -25,18 +20,4 @@ import UpdateUser from './UpdateUser';
     )
 };
 
-// const mapStateToProps = state => {
-//     return {
-//         id: state.user.id,
-//         name: state.res.name,
-//         username: state.res.username,
-//         error: state.error,
-//         isLoading: state.isLoading
-//     };
-// };
-
-// export default connect(
-//     mapStateToProps,
-//     {user}
-// )(UserCard);
 

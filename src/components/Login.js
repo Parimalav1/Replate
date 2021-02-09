@@ -11,8 +11,6 @@ import { login } from '../store/actions';
 import {connect} from 'react-redux';
 import '../login.css';
 
-// const eye = <FontAwesomeIcon icon={faEye} />;
-
 const initialLoginValues={
     username: '',
     password: '',
@@ -22,7 +20,6 @@ function LoginFormInner(props) {
     const [loginValues, setLoginValues] = useState(initialLoginValues);
     const [disabled, setDisabled] = useState(false);
     const [passwordShown, setPasswordShown] = useState(false);
-    // const { addToast } = useToasts();
     const history = useHistory();
     const alert = useAlert();
 
@@ -70,13 +67,11 @@ function LoginFormInner(props) {
                     }
                     return x
                 })
-                //addToast('Saved Successfully', { appearance: 'success' })
             })
             history.push("/")
         })
         .catch((err) => {
             alert.show('Login failed: wrong password. ' + err.message);
-            //addToast(err.message, { appearance: 'error' })
         });
     };
 
