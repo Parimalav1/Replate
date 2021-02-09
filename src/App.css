@@ -60,6 +60,7 @@
 
 #h1 {
   width: 40%;
+  display: flex;
 }
 #h1 h1{
   font-family: 'Langar';

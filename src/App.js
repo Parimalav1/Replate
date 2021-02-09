@@ -26,7 +26,7 @@ function App() {
       <div className="App">
         <Header />
         <Switch>
-          <Route exact path='/design' component={Design} />
+          <Route exact path='/home' component={Design} />
           {/* <Route exact path='/home' component={Home} /> */}
           <Route exact path='/teamup' component={Team} />
           <Route exact path='/about' component={About} />
@@ -39,7 +39,7 @@ function App() {
           <PrivateRoute exact path='/donorsFood' component={DonorsFood} />
           <PrivateRoute exact path='/donorList' component={DonorList} />
           <Route path='/'>
-            <Redirect to='/design' />
+            <Redirect to='/home' />
           </Route>
         </Switch>
       </div>

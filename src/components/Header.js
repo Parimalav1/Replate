@@ -21,7 +21,7 @@ const Header = (props) => {
     }
   }, [props])
 
-  console.log('Header state:', props.loggedIn)
+  // console.log('Header state:', props.loggedIn)
   return (
     <nav id='nav'>
       <div id="heart">
