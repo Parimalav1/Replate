@@ -52,7 +52,8 @@
   height: auto;
   margin-left: 20px;
   animation: heartbeat .6s infinite alternate;
-	transform-origin: center;
+  transform-origin: center;
+  display: flex;
 }
 @keyframes heartbeat{
 	to { transform: scale(1.1); }
