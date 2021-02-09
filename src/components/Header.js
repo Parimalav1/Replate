@@ -27,7 +27,7 @@ const Header = (props) => {
       <div id="heart">
         <img src="assets/replate13.png" alt='' />
       </div>
-      <div id='h1'>
+      <div id='headerTitle'>
         <h1>REPLATE</h1>
       </div>
       <div className="header-container">

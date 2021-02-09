@@ -58,11 +58,11 @@
 	to { transform: scale(1.1); }
 }
 
-#h1 {
+#headerTitle {
   width: 40%;
   display: flex;
 }
-#h1 h1{
+#headerTitle h1{
   font-family: 'Langar';
   width: 90px;
   font-size: 3rem;
