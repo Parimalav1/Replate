@@ -61,13 +61,14 @@
 
 #headerTitle {
   width: 40%;
+  margin: 0px 5px;
   display: flex;
 }
 #headerTitle h1{
   font-family: 'Langar';
-  width: 90px;
+  width: 220px;
   font-size: 3rem;
-  margin: 0px;
+  margin: 0px 5px;
   padding: 0 10px;
   display: flex;
 }
