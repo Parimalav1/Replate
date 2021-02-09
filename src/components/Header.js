@@ -24,11 +24,13 @@ const Header = (props) => {
   // console.log('Header state:', props.loggedIn)
   return (
     <nav id='nav'>
-      <div id="heart">
-        <img src="assets/replate13.png" alt='' />
-      </div>
-      <div id='headerTitle'>
-        <h1>REPLATE</h1>
+      <div id="heartHeader">
+        <div id="heart">
+          <img src="assets/replate13.png" alt='' />
+        </div>
+        <div id='headerTitle'>
+          <h1>REPLATE</h1>
+        </div>
       </div>
       <div className="header-container">
         { props.loggedIn && <div className="navele">
